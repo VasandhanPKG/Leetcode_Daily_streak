@@ -1,0 +1,57 @@
+# N-Repeated Element in Size 2N Array (2026-01-01)
+
+## 📸 Problem Illustration
+
+
+
+## Problem Overview
+
+You are given an integer array `nums` of size `2 * n`.
+
+The array contains:
+- `n + 1` unique numbers
+- One number that is repeated exactly `n` times
+
+---
+
+## Key Hint
+
+Since the size of the array is `2 * n` and there are `n + 1` unique numbers,
+there must be **only one number that repeats**.
+
+This observation helps narrow the problem down to simply identifying
+the repeating element.
+
+---
+
+## Approach
+
+Based on the above reasoning, the goal is to **find the first number
+that appears more than once**.
+
+To do this:
+- Traverse the array once
+- Keep track of elements already seen
+- The first repeated element encountered is the answer
+
+---
+
+## Algorithm
+
+1. Create an empty `HashSet`
+2. Iterate through each element in the array
+3. If the element already exists in the set, return it
+4. Otherwise, add the element to the set
+
+---
+
+## Time and Space Complexity
+
+- **Time Complexity:** `O(n)`
+- **Space Complexity:** `O(n)`
+
+---
+
+## Language Used
+
+- Java
