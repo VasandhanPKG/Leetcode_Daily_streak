@@ -1,4 +1,4 @@
-# Maximum Matrix Sum (2026-01-03)
+# Maximum Matrix Sum (2026-01-05)
 
 ## 📸 Proof of submission
 ![WhatsApp Image 2026-01-05 at 10 40 15 PM](https://github.com/user-attachments/assets/1555cf9d-17c8-441b-a4f1-09716abcb576)
