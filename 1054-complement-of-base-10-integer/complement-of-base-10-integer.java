@@ -3,6 +3,6 @@ class Solution {
         if (n == 0) return 1;
         int bits = 32 - Integer.numberOfLeadingZeros(n);
         int mask = (1 << bits) - 1;
-        return ~n & mask;
+        return n^mask;
     }
 }
