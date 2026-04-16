@@ -21,28 +21,18 @@ class Node {
 class Solution {
     Map<Node,Node> map=new HashMap<>();
     public Node cloneGraph(Node node) {
-        if(node==null) return null;
-        map=new HashMap<>();
-        Node clonenode=new Node(node.val);
-        map.put(node,clonenode);
-        dfs(node,clonenode,map);
-        return clonenode;
-    }
-    public void dfs(Node node,Node clonenode,Map<Node,Node> map)
-    {
-        for(Node nei:node.neighbors)
-        {
-        if(!map.containsKey(nei))
-        {
-            Node clone_nei=new Node(nei.val);
-            map.put(nei,clone_nei);
-            clonenode.neighbors.add(clone_nei);
-            dfs(nei,clone_nei,map);
+        
+        if (node == null)
+            return null;
+        map.put(node, new Node(node.val));
+        for (Node n : node.neighbors) {
+            if (!map.containsKey(n)) {
+                map.put(n, new Node(n.val));
+                cloneGraph(n);
+            }
+            map.get(node).neighbors.add(map.get(n));
         }
-        else
-        {
-            clonenode.neighbors.add(map.get(nei));
-        }
-        }
+        return map.get(node);
+    
     }
 }
