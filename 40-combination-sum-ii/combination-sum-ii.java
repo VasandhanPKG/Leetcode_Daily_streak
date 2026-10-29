@@ -14,7 +14,7 @@ class Solution {
             res.add(new ArrayList<>(cur));
             return;
         }
-        if(target<0||i==candidates.length)      return;
+        if(target<0||i==candidates.length  ||candidates[i]>target)      return;
         cur.add(candidates[i]);
         backtrack(i+1,target-candidates[i],candidates,cur,res);
         cur.remove(cur.size()-1);
